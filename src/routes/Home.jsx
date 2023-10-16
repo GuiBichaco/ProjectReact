@@ -8,6 +8,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import styles from '../routes/estilo.module.css'
 import "./style.css";
 
+
+
 //SwiperCore.use([Pagination]);
 
 function Home (){
