@@ -1,0 +1,47 @@
+
+.cards {
+    width: 349px;
+    height: 600px;
+    border-radius: 50px;
+    background: #FDCD60;
+    box-shadow:  6px 6px 12px #e4b956,-6px -6px 12px #ffe26a;
+    transition: 0.5s;
+}
+
+.cards2 {
+    width: 349px;
+    height: 500px;
+    border-radius: 50px;
+    background: #000000;
+    box-shadow:  6px 6px 12px #6b0000,-6px -6px 12px #6b0000;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.efeito-cards {
+    transform: scale(100%);
+    transition: 0.5s;
+}
+
+.efeito-cards:hover {
+    transition: 0.5s;
+    transform: perspective(900px) translateY(-5%) rotateX(15deg) translateZ(0);
+}
+
+.fotoCard {
+    margin-top: 10px;
+    opacity: 90%;
+    border-radius: 100%;
+}
+
+.price {
+    font-style: italic;
+}
+
+
+.descricao{
+    text-align: center;
+    margin-top: 3%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}
