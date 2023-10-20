@@ -1,0 +1,26 @@
+.menu{
+    
+    width: 100%;
+    background-image:linear-gradient(to right, #FDCD60, #ffe26a);
+}
+
+.menu h2{
+    align-items: center;
+}
+.navmenu ul li{
+    display: inline;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+}
+
+.tlink{
+  
+    color: black;
+    padding: 10px;
+    text-decoration: none; 
+}
+.tlink:hover{
+    color: rgb(255, 255, 255);
+    transition: .5s;
+}

@@ -1,11 +1,17 @@
-import {useState, useEffect} from 'react'
-import {Swiper, SwiperSlide} from 'swiper/react'
+import {useState, useEffect} from 'react';
+import {Swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/swiper-bundle.css';
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import styles from '../routes/estilo.module.css'
+import Imagem from '../img/miniTemaki.jpg';
+import Imagem2 from '../img/hot.jpg';
+import Imagem3 from '../img/sashimi.jpg';
+import Imagem4 from '../img/image1.jpg';
+import Imagem5 from '../img/image2.jpg';
+import Imagem6 from '../img/image3.jpg';
+import styles from '../routes/estilo.module.css';
 import "./style.css";
 
 
@@ -20,9 +26,9 @@ function Home (){
 
   /*criando o objeto de imagens*/
 const imagens = [
-  {id:'1', image:'./src/assets/image1.jpg'},
-  {id:'2', image:'./src/assets/image2.jpg'},
-  {id:'3', image:'./src/assets/image3.jpg'}
+  {id:'1', image: Imagem4},
+  {id:'2', image: Imagem5},
+  {id:'3', image: Imagem6}
 ];
 
 /*criando o efeito colateral*/
@@ -65,7 +71,7 @@ useEffect(() => {
   return () => {
     clearInterval(interval);
   };
-}, [swiper]);
+}, [imagens.length, swiper]);
 
   return(
     <section>
@@ -83,9 +89,9 @@ useEffect(() => {
       </Swiper>
 
       <p className='descricao'>
-      "Desfrute de uma autêntica experiência culinária japonesa no Sushi Bigas. 
-      Nosso restaurante oferece uma vasta seleção de pratos de sushi e sashimi preparados com ingredientes frescos e de alta qualidade. 
-      Explore sabores únicos e mergulhe na rica cultura gastronômica do Japão. Visite-nos hoje e saboreie a perfeição do sushi no Sushi Bigas!"
+        Desfrute de uma autêntica experiência culinária japonesa no Sushi Bigas. 
+        Nosso restaurante oferece uma vasta seleção de pratos de sushi e sashimi preparados com ingredientes frescos e de alta qualidade. 
+        Explore sabores únicos e mergulhe na rica cultura gastronômica do Japão. Visite-nos hoje e saboreie a perfeição do sushi no Sushi Bigas!
       </p>
 
       {/* ÁREA DE CARTÕES */}
@@ -95,7 +101,7 @@ useEffect(() => {
             <div className="card cards m-2 efeito-cards" style={{ borderRadius: '15px' }}>
               <div className="card-body">
                 <h5 className="card-title"><strong>Temaki</strong></h5>
-                <img src="./src/assets/miniTemaki.jpg" alt="" className='fotoCard'/>
+                <img src={Imagem} title="imagem" className='fotoCard'/>
                 <p className="card-text my-4">
                   O temaki é um prato japonês.
                   Combina arroz, peixe fresco e vegetais.
@@ -109,7 +115,7 @@ useEffect(() => {
             <div className="card cards m-2 efeito-cards" style={{ borderRadius: '15px' }}>
               <div className="card-body">
                 <h5 className="card-title"><strong>HotRoll</strong></h5>
-                <img src="./src/assets/hot.jpg" alt="" className='fotoCard'/>
+                <img src={Imagem2} title="imagem2" className='fotoCard'/>
                 <p className="card-text my-4">O Hot Roll é um rolinho de sushi frito, recheado com ingredientes como arroz, peixe e vegetais, oferecendo uma mistura de sabores crocantes e saborosos.</p>
                 <p className="card-text my-4 price">R$ 35,00</p>
               </div>
@@ -119,7 +125,7 @@ useEffect(() => {
             <div className="card cards m-2 efeito-cards" style={{ borderRadius: '15px' }}>
               <div className="card-body">
                 <h5 className="card-title"><strong>Sashimi</strong></h5>
-                <img src="./src/assets/sashimi.jpg" alt="" className='fotoCard'/>
+                <img src={Imagem3} title="imagem3" className='fotoCard'/>
                 <p className="card-text my-4">O Sashimi é uma iguaria japonesa composta por finas fatias de peixe cru fresco, servido sem arroz. É apreciado por sua textura e sabor puros.</p>
                 <p className="card-text my-4 price">R$ 45,00</p>
               </div>
